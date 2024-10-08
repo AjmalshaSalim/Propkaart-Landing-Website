@@ -4,11 +4,11 @@
 /* Colour theme for Godrej Green */
 
 .Godrej-Green{
-    --Primary-color: #6b8d14;
-    --tab-color: #84af1d;
+    --Primary-color: #848c58;
+    --tab-color: #848c58;
     --Secondary-color: #b1175a;
-    --button-color: #6b8d14;
-    --button-hover-color: #485f0d;
+    --button-color: #848c58;
+    --button-hover-color: #848c58;
     --button-text-color:#fff;
     --button-text-hover-color:#fff;
     --pricing-filter:  invert(54%) sepia(55%) saturate(618%) hue-rotate(48deg) brightness(118%) contrast(91%);
