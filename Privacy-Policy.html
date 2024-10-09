@@ -5,35 +5,75 @@
 <!-- Mirrored from budigere-cross.com/Privacy-Policy.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Oct 2024 16:47:07 GMT -->
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
   <style>
-  body {
-    font-family: "Montserrat",Sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-  }
+        body,button{
+        font-family: "Afacad Flux", sans-serif !important;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:"slnt" 0;
+      }
   .container {
     width: 90%;
     max-width: 1140px;
     margin: auto;
+    margin-bottom: 50px;
     padding-bottom: 50px;
+  }
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader::after {
+    content: "";
+    width: 65px;
+    height: 65px;
+    border: 15px solid #dddddd;
+    border-top-color: #778049;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
   }
 </style>
 
 </head>
 
 <body >
+  <div class="loader"></div>
   <div class="container">
   <h2 style="padding: 20px; text-align: center;">Legal Disclaimer &amp; Privacy Policy</h2>
 
   <h2>Disclaimer</h2>
 
   <p>
-    This website serves as an informational platform about various real estate projects across different regions. By accessing this site, you acknowledge that the information provided, including brochures and marketing materials, is for informational purposes only. You confirm that you have not relied on this information to make any bookings or purchases in any of the company’s projects. Nothing on this website constitutes advertising, marketing, selling, or an offer for sale, nor an invitation to purchase a unit in any project by the company. The company holds no liability for any actions taken by viewers based on the material/information on this site. Please note, the company has not verified the information or compliances of the projects listed herein, including their RERA (Real Estate Regulation Act 2016) registration status. It is advisable to verify the RERA registration status of listed real estate projects before making any purchase.
+    This website serves as an informational platform about various real estate projects across different regions. By accessing this site, you acknowledge that the information provided, including brochures and marketing materials, is for informational purposes only. You confirm that you have not relied on this information to make any bookings or purchases in any of the company's projects. Nothing on this website constitutes advertising, marketing, selling, or an offer for sale, nor an invitation to purchase a unit in any project by the company. The company holds no liability for any actions taken by viewers based on the material/information on this site. Please note, the company has not verified the information or compliances of the projects listed herein, including their RERA (Real Estate Regulation Act 2016) registration status. It is advisable to verify the RERA registration status of listed real estate projects before making any purchase.
   </p>
   <h2 style="margin-top: 30px;">Privacy Policy</h2>
   <p>Our commitment to safeguarding your personal information is reflected in this comprehensive privacy policy designed to protect your interests and information on our website.</p>
   <h2 style="margin-top: 30px;">Updates to Privacy Policy</h2>
-  <p>This privacy policy is subject to change and review without prior notice or approval. We recommend periodic reviews of this policy’s terms and conditions to stay updated on any introduced changes.</p>
+  <p>This privacy policy is subject to change and review without prior notice or approval. We recommend periodic reviews of this policy's terms and conditions to stay updated on any introduced changes.</p>
   <h2 style="margin-top: 30px;">User Information</h2>
   <p>By using our website, you agree to comply with our established rules and consent to the collection and use of any information you provide through our platform. While some sections of our website may not require personal information during your visit, certain areas may necessitate details such as your name, email address, or phone number. The information you provide enables us to offer relevant products and services, respond to your queries, or send updates. You have the option to request removal from our mailing list. Rest assured, we do not disclose your personal information to third parties.</p>
   <h2 style="margin-top: 30px;">Security Measures</h2>
@@ -41,7 +81,20 @@
  <!-- <h2 style="margin-top: 30px;">Use of Cookies</h2>
   <p>For security, session continuity, and customization purposes, we may utilize cookies. Rejecting a cookie might limit access to certain services or features of the site. For queries or suggestions regarding our privacy statement or your interactions with this website, please contact us at info@propsolutions4u.com or Visit – <a href="https://propsolutions4u.com/" target="_blank" style="color:#000;">www.propsolutions4u.com</a> -->
   <!--</p>-->
+  <button type="button" class="btn mx-auto d-block form-btn1" style="border-radius: 3px;"
+  onclick="window.location.href='index.html'">Back To Home</button>
 </div><!--end container-->
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    setTimeout(() => {
+      loader.classList.add("loader--hidden");
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    }, 1000);
+  });
+</script>
 </body>
 
 <!-- Mirrored from budigere-cross.com/Privacy-Policy.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Oct 2024 16:47:07 GMT -->
