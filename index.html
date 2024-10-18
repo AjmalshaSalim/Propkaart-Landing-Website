@@ -200,14 +200,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3 class="mb-0">Pre-Register here for Best Offers</h3>
           </div>
           <div class="form-section p-4">
-            <form class=" text-center" name="Pre-Register">
+            <form class="contact-form text-center" name="Pre-Register" action="mail.php" method="post">
               <div class="form-group mb-3">
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Name here..."
-                  name="name" required>
+                <input type="text" class="form-control" placeholder="Enter Your Name here..."
+                  name="name" id="name" required>
                 <span class="error">Name field is required</span>
               </div>
               <div class="form-group mb-4">
-                <input type="number" id="mobile" class="form-control" placeholder="Phone Number" name="mobile" required>
+                <input type="number" id="phone" class="form-control" placeholder="Phone Number" name="phone" required>
                 <span class="error">Mobile field is required</span>
               </div>
 
@@ -224,9 +224,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </label>
               </div>
 
-              <button id="mobile-pre-register-button" data-id="Pre-Register Mobile"
-                class="btn preRegisterBtn data-id-btn" onclick="submitForm(event, 'Pre-Register')">Pre-Register
-                Now</button>
+              <!--<button id="mobile-pre-register-button"-->
+              <!--  class="btn preRegisterBtn data-id-btn" type="submit" value="send message">Pre-Register-->
+              <!--  Now</button>-->
+               <input type="submit" class="btn btn-primary" value="send message">
+                <span id="alert_message"></span>
             </form>
           </div>
         </div>
@@ -767,16 +769,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div class="col-lx-6 col-lg-6 col-sm-12 form-data">
                     <h2 class="text-left ms-3 mt-5" style="font-size: 28px;">Schedule a Site Visit</h2>
                     <div class="form">
-                      <form name="schedule-site">
+                      <form name="schedule-site" action="mail.php" method="post">
                         <div class="row">
                           <div class="col-lg-10 col-sm-12 forms-input-fields">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="name" class="form-control ms-0 me-0" required placeholder="Name*">
+                            <input type="text" name="name" id="name" class="form-control ms-0 me-0" required placeholder="Name*">
                             <span class="error">Name field is required</span>
                           </div>
                           <div class="col-lg-10 col-sm-12 forms-input-fields">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="number" name="mobile" id="mobile" class="form-control ms-0 me-0" required
+                            <input type="number" name="phone" id="phone" class="form-control ms-0 me-0" required
                               placeholder="Mobile*">
                             <span class="error">Mobile field is required</span>
 
@@ -786,6 +788,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <input type="hidden" name="form_name" id="form_name3" class="form-control form_name"
                               value="Auto Modal">
                             <input type="hidden" id="website_url3" class="website_url" name="website_url">
+                            <input type="text" class="form-control" placeholder="Subject" id="topic" name="topic" value="Requesting a site visit on Godrej Lakeside Orchid - For schedule the site visit " style="display:none" />
                           </div>
                           <div class="form-group acceptance mb-2" style="font-size: 10px;">
                             <label class="form-check-label text-start">
@@ -794,9 +797,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 policy</span>
                             </label>
                           </div>
-                          <button id="schedule-site-visit-button" type="submit" name="submit"
-                            class="btn ms-2 custom-btn btn-hover text-white data-id-btn" style="width: auto;"
-                            data-id="Contact Site Visit" onclick="submitForm(event, 'schedule-site')">Submit</button>
+                          <!--<button id="schedule-site-visit-button" type="submit" name="submit"-->
+                          <!--  class="btn ms-2 custom-btn btn-hover text-white data-id-btn" style="width: auto;"-->
+                          <!--  data-id="Contact Site Visit" onclick="submitForm(event, 'schedule-site')">Submit</button>-->
+                           <div class="col-12">
+                <input type="submit" class="btn form-btn1" value="Submit">
+                <span id="alert_message"></span>
+              </div>
                         </div>
                       </form>
                     </div>
@@ -887,20 +894,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="form-section p-3">
         <h2 class="pb-2">Pre-Register here for Best Offers</h2>
 
-        <form class="text-center" name="Pre-Register-sidemodal">
+        <form class="text-center" name="Pre-Register-sidemodal" action="mail.php" method="post">
           <div class="form-group mb-3">
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Name here..."
-              name="name" required>
+              name="name" id="name" required>
             <span class="error">Name field is required</span>
           </div>
           <div class="form-group mb-3">
-            <input type="number" id="mobile" class="form-control" required placeholder="Phone Number" name="mobile">
+            <input type="number" id="phone" class="form-control" required placeholder="Phone Number" name="phone">
             <span class="error">Mobile field is required</span>
           </div>
 
           <div>
             <input type="hidden" name="form_name" id="form_name2" class="form-control form_name" value="Pre-Register">
             <input type="hidden" id="website_url2" class="website_url" name="website_url">
+            <input type="text" class="form-control" placeholder="Subject" id="topic" name="topic" value="Pre-registration for Godrej Lakeside Orchid - Pre register - offer form submission" style="display:none" />
           </div>
 
           <div class="form-group acceptance mb-3" style="font-size: 10px;">
@@ -910,8 +918,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </label>
           </div>
 
-          <button id="right-panel-preregister-button" class="btn preRegisterBtn data-id-btn" data-id="Pre-Register"
-            onclick="submitForm(event, 'Pre-Register-sidemodal')">Pre-Register Now</button>
+          <!--<button id="right-panel-preregister-button" class="btn preRegisterBtn data-id-btn" data-id="Pre-Register"-->
+          <!--  onclick="submitForm(event, 'Pre-Register-sidemodal')">Pre-Register Now</button>-->
+           <div class="col-12">
+                <input type="submit" class="btn form-btn1" value="Pre-Register Now">
+                <span id="alert_message"></span>
+              </div>
         </form>
 
 <div class="emi-box" style="width: 100%; height: 120px; margin-top: 35px;">
@@ -966,16 +978,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-          <form id="main-popup" name="modal-form">
+          <form id="main-popup" name="modal-form" action="mail.php" method="post">
 
             <div class="row">
               <div class="col-lg-6 col-sm-12 forms-input-fields">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" name="name" class="form-control" autofocus required placeholder="Name*">
+                <input type="text" name="name" id="name" class="form-control" autofocus required placeholder="Name*">
                 <span name="nameError" class="error">Name field is required</span>
               </div>
               <div class="col-lg-6 col-sm-12 forms-input-fields">
-                <i class="fa-solid fa-phone"></i><input type="number" name="mobile" id="mobile" class="form-control"
+                <i class="fa-solid fa-phone"></i><input type="number" name="phone" id="phone" class="form-control"
                   required placeholder="Mobile*">
                 <span name="nameError" class="error">Mobile field is required</span>
               </div>
@@ -983,13 +995,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row">
               <div class="col-lg-12 col-sm-12 forms-input-fields">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" name="email" class="form-control" placeholder="Email (Optional)">
+                <input type="email" name="email" class="form-control" placeholder="Email (Optional)" id="email">
               </div>
             </div>
 
             <div>
               <input type="hidden" name="form_name" id="form_name" class="form-control form_name" value="Auto Modal">
               <input type="hidden" id="website_url" class="website_url" name="website_url">
+              <input type="text" class="form-control" placeholder="Subject" id="topic" name="topic" value="Godrej Lakeside orchid Enquiry - Requesting a call back" style="display:none" />
             </div>
 
             <div class="row">
@@ -1001,9 +1014,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       the privacy policy</span>
                   </label>
                 </div>
-                <button type="submit" name="Submit" class="btn mx-auto d-block form-btn1"
-                  onclick="submitForm(event, 'modal-form')">Enquire
-                  Now</button>
+                <!--<button type="submit" name="Submit" class="btn mx-auto d-block form-btn1"-->
+                <!--  onclick="submitForm(event, 'modal-form')">Enquire-->
+                <!--  Now</button>-->
+                <div class="col-12">
+                <input type="submit" class="btn form-btn1" value="Enquire Now">
+                <span id="alert_message"></span>
+              </div>
               </div>
             </div>
           </form>
